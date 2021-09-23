@@ -39,8 +39,8 @@ public class home extends AppCompatActivity
     static List<MenuModel> headerList = new ArrayList<>();
     static HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
     static DrawerLayout drawer;
-    static List<MenuModel> headerList2 = new ArrayList<>();
-    static HashMap<MenuModel, List<MenuModel>> childList2 = new HashMap<>();
+  //  static List<MenuModel> headerList2 = new ArrayList<>();
+  //  static HashMap<MenuModel, List<MenuModel>> childList2 = new HashMap<>();
     static Context context;
     static TextView toolbartext;
     @Override
