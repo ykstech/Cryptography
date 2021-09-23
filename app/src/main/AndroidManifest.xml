@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yks.secretmessaging">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cryptoheader"
+        android:label="Cryptography"
+        android:roundIcon="@drawable/cryptoheader"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SecretMessaging">
+        <activity android:name=".home">
+        </activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
