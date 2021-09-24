@@ -81,6 +81,7 @@ public class home extends AppCompatActivity
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
                     .add(R.id.fragment_container_view, homefragment.class, null)
+                    //.addToBackStack("Stack")
                     .commit();
         }
 
@@ -92,12 +93,16 @@ public class home extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-
-
-
-            int count = getSupportFragmentManager().getBackStackEntryCount();
+          int num;
+            if(toolbartext.getText().toString().equals("Cryptography")){
+                //  toast("already");
+                num=0;
+            }else {
+                num=1;
+            }
+                int count = getSupportFragmentManager().getBackStackEntryCount();
          //   toast("count: "+count);
-            for(int i=count;i>1;i--){
+            for(int i=count;i>num;i--){
 
                 getSupportFragmentManager().popBackStack();
 
@@ -105,6 +110,7 @@ public class home extends AppCompatActivity
             toolbartext.setText("Cryptography");
 
             super.onBackPressed();
+
         }
     }
 
@@ -219,7 +225,9 @@ public class home extends AppCompatActivity
                         }else {
                             fragmentActivity.getSupportFragmentManager().beginTransaction().
                                     replace(R.id.fragment_container_view, headerList.get(groupPosition).url).
-                                    setReorderingAllowed(true).addToBackStack("Stack").commit();
+                                    setReorderingAllowed(true)
+                                    .addToBackStack("Stack")
+                             .commit();
                             toolbartext.setText("Cryptography");
 
                         }
@@ -250,7 +258,9 @@ public class home extends AppCompatActivity
 
 
 
-                        fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, argumentFragment).setReorderingAllowed(true).addToBackStack("Stack").commit();
+                        fragmentActivity.getSupportFragmentManager().beginTransaction().
+                                replace(R.id.fragment_container_view, argumentFragment).
+                                setReorderingAllowed(true).addToBackStack("Stack").commit();
 
                         toolbartext.setText(model.menuName);
 
