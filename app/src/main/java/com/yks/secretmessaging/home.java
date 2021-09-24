@@ -165,7 +165,7 @@ public class home extends AppCompatActivity
         childModel = new MenuModel("RSA Cipher", false, false, new rsa(),0);
         childModelsList.add(childModel);
 
-       childModel = new MenuModel("DES Cipher", false, false, new symmetric(),0);
+       childModel = new MenuModel("DSA Cipher", false, false, new symmetric(),0);
        childModelsList.add(childModel);
 
 

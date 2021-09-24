@@ -42,7 +42,7 @@ public class symmetric extends Fragment {
         keyinput=view.findViewById(R.id.key_input);
         swap=view.findViewById(R.id.swap);
 
-        if(getArgument.equals("DES Cipher")){
+        if(getArgument.equals("DSA Cipher")){
             keyinput.setVisibility(View.GONE);
             swap.setVisibility(View.GONE);
         }
@@ -140,7 +140,7 @@ public class symmetric extends Fragment {
             case "Blowfish Encryption":
             result= encryptblowfish(str,mode,pass); break;
 
-            case "DES Cipher":
+            case "DSA Cipher":
                 byte[] encryptedTextfinal = new byte[0];
                 if(mode==2) {
                     String str2 = result;
