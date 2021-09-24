@@ -267,7 +267,7 @@ public static String dititaldecryptnencrypt(byte[] encryptedMessageHash,byte[] i
 
 
 
- return md5Hex;
+ return md5Hex.toUpperCase();
  }
 
 public static SecretKey generatedes(String pass) throws Exception{
